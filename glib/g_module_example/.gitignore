@@ -1,0 +1,4 @@
+*.o
+module1.so
+module2.so
+test_g_module
