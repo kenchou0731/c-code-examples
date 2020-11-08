@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<node name="/" xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd">
+
+  <interface name="example.ken.testdbus.MyObject">
+
+    <method name="Method1">
+      <arg name="arg1" type="i" direction="in"  />
+    </method>
+
+    <method name="Method2">
+      <arg name="arg1" type="s" direction="in" />
+    </method>
+
+    <property name="Property1" type="s" access="read" />
+
+    <signal name="Signal1" />
+
+  </interface>
+</node>
