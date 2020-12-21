@@ -1,0 +1,5 @@
+*.o
+myobj.c
+myobj.h
+cli
+server
