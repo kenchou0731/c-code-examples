@@ -1,0 +1,3 @@
+*.o
+test_read_g_key_file
+test_write_g_key_file
