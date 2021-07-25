@@ -1,0 +1,4 @@
+*.o
+get_in_memory
+simple_get
+simple_post
