@@ -1,0 +1,3 @@
+*.o
+test_g_list
+list_remove_issue
