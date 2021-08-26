@@ -1,0 +1,4 @@
+*.o
+get_mountpoint
+mount-dev
+unmount-dev
