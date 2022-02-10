@@ -1,23 +1,12 @@
 #include <stdio.h>
-#include <errno.h>
-#include <linux/unistd.h>
-#include <linux/kernel.h> /* for struct sysinfo */
-#include <sys/sysinfo.h>
+#include <time.h>
 
-long get_uptime(void)
-{
-	struct sysinfo s_info;
-	int rc;
+int main(void) {
+	struct timespec t;
 
-	rc = sysinfo(&s_info);
-	if (rc != 0) {
-		printf("Error code: %d\n", rc);
-	}
-	return s_info.uptime;
-}
-
-int main(void)
-{
-	printf("%ld\n", get_uptime());
+	clock_gettime(CLOCK_MONOTONIC, &t);
+	printf("%llu.%llu",
+		(unsigned long long) t.tv_sec,
+		(unsigned long long) t.tv_nsec / 1000000);
 	return 0;
 }
